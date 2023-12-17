@@ -1,0 +1,17 @@
+apiVersion: hemanth.hemanth.vit/v1alpha1
+kind: Ebpffirewall
+metadata:
+  labels:
+    app.kubernetes.io/name: ebpffirewall
+    app.kubernetes.io/instance: ebpffirewall-sample
+    app.kubernetes.io/part-of: ebpfcontroller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ebpfcontroller
+  name: ebpffirewall-sample
+spec:
+  # TODO(user): Add fields here
+  block:
+    - ip : "122.184.65.22"
+    - subnet : "127.9.0.0"
+    - dns : "www.youtube.com"
+

@@ -1,0 +1,27 @@
+# permissions for end users to view ebpffirewalls.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: ebpffirewall-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: ebpfcontroller
+    app.kubernetes.io/part-of: ebpfcontroller
+    app.kubernetes.io/managed-by: kustomize
+  name: ebpffirewall-viewer-role
+rules:
+- apiGroups:
+  - hemanth.hemanth.vit
+  resources:
+  - ebpffirewalls
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - hemanth.hemanth.vit
+  resources:
+  - ebpffirewalls/status
+  verbs:
+  - get

@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- hemanth_v1alpha1_ebpffirewall.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
